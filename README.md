@@ -1,18 +1,19 @@
+# Cybersecurity Web Attack Analysis
 
+## Project Overview
 
-Cybersecurity Web Attack Analysis
 This project focuses on analyzing web traffic and cybersecurity attack data to detect suspicious activities and potential attacks using exploratory data analysis (EDA) and machine learning models.
-Project Overview
+
 The primary objectives are:
 
-To explore web traffic patterns and identify anomalies.
-To classify cybersecurity threats using machine learning techniques.
-To provide actionable insights into network security.
+1. **To explore web traffic patterns and identify anomalies.**
+2. **To classify cybersecurity threats using machine learning techniques.**
+3. **To provide actionable insights into network security.**
 
-The project leverages two datasets:
+# Dataset Used
 
 CloudWatch_Traffic_Web_Attack.csv: Web traffic logs with details like bytes transferred, timestamps, and IP addresses.
-cybersecurity_attacks.csv: Logs of cybersecurity incidents, including attack types and severity.
+
 
 Analysis and modeling are conducted in the Jupyter notebook Cyber_Security.ipynb.
 Datasets
@@ -26,52 +27,43 @@ creation_time, end_time: Timestamps (converted to datetime in analysis).
 src_ip, dst_ip: Source and destination IPs.
 All columns are non-null; no duplicates found.
 
-
-
-2. cybersecurity_attacks.csv
-
-Description: Detailed logs of cybersecurity attacks across various protocols and severities.
-Rows: 100 (sample shown; full size truncated).
-Key Columns:
-Timestamp: Attack occurrence time.
-Source IP Address, Destination IP Address: IPs involved.
-Attack Type: Includes Malware, DDoS, Intrusion.
-Severity Level: Low, Medium, High.
-
-
-
-Installation and Dependencies
+## Installation and Dependencies
 To run this project, install Python and the following libraries:
 
+```
 pandas
 matplotlib
 seaborn
 scikit-learn
 tensorflow
 joblib
+```
 
-Install via pip:
+#Install via pip:
+```
 pip install pandas matplotlib seaborn scikit-learn tensorflow joblib
+```
 
-Usage
+# Usage
 
 Clone the Repository:
-git clone https://github.com/yourusername/your-repo-name.git
+```
+git clone https://github.com/anasrobo/CyberSecurity_Suspicious_Web_Threat_Interactions.git
 cd your-repo-name
+```
+
+# Upload Datasets:
+
+Place CloudWatch_Traffic_Web_Attack.csv in the project directory.
 
 
-Upload Datasets:
-
-Place CloudWatch_Traffic_Web_Attack.csv and cybersecurity_attacks.csv in the project directory.
-
-
-Run the Notebook:
+# Run the Notebook:
 
 Open Cyber_Security.ipynb in Jupyter Notebook or JupyterLab.
 Execute cells sequentially to load data, perform EDA, and train models.
 
 
-Load Saved Models:
+# Load Saved Models:
 
 Random Forest: random_forest_model.pkl
 Conv1D Neural Network: conv1d_model.keras
@@ -82,11 +74,7 @@ rf_model = joblib.load('random_forest_model.pkl')
 conv1d_model = load_model('conv1d_model.keras')
 dense_model = load_model('dense_model.keras')
 
-
-
-
-
-Analysis and Results
+# Analysis and Results
 Exploratory Data Analysis (EDA)
 
 Data Loading: Loaded CloudWatch_Traffic_Web_Attack.csv (282 rows, 16 columns).
@@ -98,22 +86,28 @@ Statistical summary showed high variance in bytes_in (max: 25.2M) and bytes_out.
 
 Visualizations: Histogram of bytes_in and bytes_out distributions (plotted with KDE).
 
-Machine Learning Models
+## Machine Learning Models
 
-Random Forest Classifier:
+# Random Forest Classifier:
 Trained to classify traffic as normal or suspicious.
 Saved as random_forest_model.pkl.
 
 
-Neural Networks:
+# Neural Networks:
 Conv1D Model: Sequence-based anomaly detection, 50 epochs, 100% test accuracy.
 Dense Model: General classification, also achieved 100% accuracy.
 Both saved as .keras files.
 
 
-Evaluation: Models tested on a subset, showing perfect accuracy (note: small dataset size may affect generalizability).
+# Evaluation: 
+Models tested on a subset, showing perfect accuracy (note: small dataset size may affect generalizability).
 
-Contributing
+#Contributing
 Contributions are welcome! Fork the repository, make changes, and submit a pull request. Ensure code adheres to PEP 8 standards.
-License
+
+#License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+
+> Built with ❤️ by Anas

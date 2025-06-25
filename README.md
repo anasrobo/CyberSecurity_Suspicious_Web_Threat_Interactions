@@ -102,10 +102,10 @@ Both saved as .keras files.
 # Evaluation: 
 Models tested on a subset, showing perfect accuracy (note: small dataset size may affect generalizability).
 
-#Contributing
+# Contributing
 Contributions are welcome! Fork the repository, make changes, and submit a pull request. Ensure code adheres to PEP 8 standards.
 
-#License
+# License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ---
